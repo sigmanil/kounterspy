@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 
 @SpringBootTest
-class KounterspyApplicationTests(@Qualifier("myJdbcTemplate") val jdbc: NamedParameterJdbcTemplate) {
+class ContextTest(@Qualifier("myJdbcTemplate") val jdbc: NamedParameterJdbcTemplate) {
 
     @Test
     fun contextLoads() {
