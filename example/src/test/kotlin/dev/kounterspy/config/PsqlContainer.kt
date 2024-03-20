@@ -15,7 +15,10 @@ abstract class PsqlContainer {
     @ServiceConnection
     val postgres: PostgreSQLContainer<*> = KGenericContainer("postgres:16.1")
       .withInitScript("db/init_postgre.sql")
-      .withReuse(true)
       .withExposedPorts(5432)
+      .withDatabaseName("test")
+      .withUsername("test")
+      .withPassword("test")
+      .withReuse(true)
   }
 }

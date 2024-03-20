@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class BookDaoTest : PsqlContainer() {
+class AuthorDaoTest : PsqlContainer() {
 
   @Autowired
-  private lateinit var bookDao: BookDao
+  private lateinit var authorDao: AuthorDao
 
   @Test
-  fun `should return all cars - which is zero`() {
-    val books = bookDao.findAll()
-    assertThat(books).isEmpty()
+  fun `should return all authors - which is zero`() {
+    val fruits = authorDao.findAll()
+    assertThat(fruits).isEmpty()
   }
 }

@@ -1,4 +1,4 @@
-package dev.kounterspy.repository
+package dev.kounterspy.repository.queries
 
 class BookQueries {
   val findAll: String =

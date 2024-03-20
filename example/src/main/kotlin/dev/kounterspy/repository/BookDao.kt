@@ -1,7 +1,8 @@
 package dev.kounterspy.repository
 
-import dev.kounterspy.repository.dao.BookEntity
-import dev.kounterspy.repository.dao.BookEntityMapper
+import dev.kounterspy.repository.model.BookEntity
+import dev.kounterspy.repository.model.BookEntityMapper
+import dev.kounterspy.repository.queries.BookQueries
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
