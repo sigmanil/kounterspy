@@ -5,14 +5,14 @@ import java.sql.ResultSet
 
 data class BookEntity(
   val id: Long?,
-  val name: String,
+  val title: String,
 )
 
 class BookEntityMapper : RowMapper<BookEntity> {
   override fun mapRow(rs: ResultSet, rowNum: Int): BookEntity? {
     return try { BookEntity(
         id = rs.getLong("id"),
-        name = rs.getString("name"),
+        title = rs.getString("title"),
       )
     } catch (e: Exception) {
       null
