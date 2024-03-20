@@ -4,13 +4,8 @@ import dev.kounterspy.config.PsqlContainer
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest
-class BookDaoTest : PsqlContainer() {
-
-  @Autowired
-  private lateinit var bookDao: BookDao
+class BookDaoTest(@Autowired private val bookDao: BookDao) : PsqlContainer() {
 
   @Test
   fun `should return all cars - which is zero`() {
